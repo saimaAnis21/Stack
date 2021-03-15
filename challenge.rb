@@ -1,12 +1,25 @@
 # Start with your code from LinkedList challenge.
+require_relative 'Linkedlist'
 
 class Stack
+  attr_accessor :list
+  def initialize
+      @list= LinkedList.new
+      
+    end
+
+
   def push(number)
     # your code here
+    
+      @list.add_at(0,number)
+   
+    
   end
   
   def pop
     # your code here
+    @list.remove(0)
   end
 end
 
